@@ -44,6 +44,7 @@ $drawer-bg: $gray-lighter !default;
 #nav-drawer {
     right: auto;
     left: 0;
+    background-image: linear-gradient(-90deg, #001042, #022a5d);
 
     /* Override the z-indexes defined in bootstrap/_list-group.scss that
        lead to side effects on the user tours positioning. */

@@ -5493,7 +5493,8 @@ tbody.collapse.show {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125); }
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 25px; }
   .card > hr, #page-enrol-users #filterform > hr, .que .history > hr, .userprofile .profile_tree section > hr, .groupinfobox > hr, .well > hr {
     margin-right: 0;
     margin-left: 0; }
@@ -5936,7 +5937,9 @@ tbody.collapse.show {
   padding: 0.75rem 1.25rem;
   margin-bottom: -1px;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125); }
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  margin: 1px 0px;
+  border-radius: 25px; }
   .list-group-item:last-child {
     margin-bottom: 0; }
   .list-group-item:hover, .list-group-item:focus {
@@ -8782,12 +8785,16 @@ input[disabled] {
 }
 */
 /* core.less */
+body {
+  background: linear-gradient(90deg, #001042, #022a5d); }
+
 #region-main {
   overflow-x: auto;
   overflow-y: visible;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px dashed rgba(0, 0, 0, 0.125);
   padding: 1.25rem;
-  background-color: #fff; }
+  background-color: #fff;
+  border-radius: 25px; }
 
 .context-header-settings-menu,
 .region-main-settings-menu {
@@ -12575,6 +12582,7 @@ span.editinstructions {
 #nav-drawer {
   right: auto;
   left: 0;
+  background-image: linear-gradient(-90deg, #001042, #022a5d);
   /* Override the z-indexes defined in bootstrap/_list-group.scss that
        lead to side effects on the user tours positioning. */ }
   #nav-drawer .list-group-item-action.active,
@@ -16684,7 +16692,8 @@ body {
 #page-wrapper {
   height: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  background-image: linear-gradient(90deg, #001042, #022a5d); }
   #page-wrapper #page {
     flex: 1 0 auto;
     display: flex;
@@ -16692,7 +16701,9 @@ body {
     #page-wrapper #page #page-content {
       flex: 1 0 auto; }
   #page-wrapper #page-footer {
-    flex-shrink: 0; }
+    display: none;
+    flex-shrink: 0;
+    background-image: linear-gradient(90deg, #001042, #022a5d); }
 
 .popover-region {
   float: right;

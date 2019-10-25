@@ -5,12 +5,17 @@
 // want white default colour.
 $bg-inverse-link-color: #fff !default;
 
+body {
+    background: linear-gradient(90deg, #001042, #022a5d);
+}
+
 #region-main {
     overflow-x: auto;
     overflow-y: visible;
-    border: $card-border-width solid $card-border-color;
+    border: $card-border-width dashed $card-border-color;
     padding: $card-spacer-x;
     background-color: $body-bg;
+    border-radius: 25px;
 }
 
 .context-header-settings-menu,
