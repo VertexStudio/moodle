@@ -954,6 +954,15 @@ function signup_validate_data($data, $files) {
     global $CFG, $DB;
 
     $errors = array();
+    //
+    if(!$DB->record_exists('title', array('license'=>$data['profile_field_license'])))
+    {   
+        $errors['profile_field_license'] = "La licencia no fue encontrada!";
+    }
+
+    //$data['email'] = $data['username'] . '@grupoaker.com';
+    //$data['email2'] = $data['username'] . '@grupoaker.com';
+    
     $authplugin = get_auth_plugin($CFG->registerauth);
 
     if ($DB->record_exists('user', array('username' => $data['username'], 'mnethostid' => $CFG->mnet_localhost_id))) {
@@ -975,7 +984,8 @@ function signup_validate_data($data, $files) {
     if ($authplugin->user_exists($data['username'])) {
         $errors['username'] = get_string('usernameexists');
     }
-
+    /*
+    // Email verification
     if (! validate_email($data['email'])) {
         $errors['email'] = get_string('invalidemail');
 
@@ -1003,8 +1013,8 @@ function signup_validate_data($data, $files) {
         if ($err = email_is_not_allowed($data['email'])) {
             $errors['email'] = $err;
         }
-    }
-
+    }*/
+    // End Email verification
     $errmsg = '';
     if (!check_password_policy($data['password'], $errmsg)) {
         $errors['password'] = $errmsg;
