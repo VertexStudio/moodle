@@ -2232,9 +2232,9 @@ class core_renderer extends renderer_base {
         $url = new moodle_url(get_docs_url($path));
 
         $attributes = array('href'=>$url);
-        if (!empty($CFG->doctonewwindow) || $forcepopup) {
+        /*if (!empty($CFG->doctonewwindow) || $forcepopup) {
             $attributes['class'] = 'helplinkpopup';
-        }
+        }*/
 
         return html_writer::tag('a', $icon.$text, $attributes);
     }

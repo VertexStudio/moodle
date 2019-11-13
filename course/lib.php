@@ -668,8 +668,8 @@ function get_module_metadata($course, $modnames, $sectionreturn = null) {
             if ($sm->string_exists('modulename_link', $modname)) {  // Link to further info in Moodle docs.
                 $link = get_string('modulename_link', $modname);
                 $linktext = get_string('morehelp');
-                $defaultmodule->help .= html_writer::tag('div',
-                    $OUTPUT->doc_link($link, $linktext, true), array('class' => 'helpdoclink'));
+                /*$defaultmodule->help .= html_writer::tag('div',
+                    $OUTPUT->doc_link($link, $linktext, true), array('class' => 'helpdoclink'));*/
             }
         }
         $defaultmodule->archetype = plugin_supports('mod', $modname, FEATURE_MOD_ARCHETYPE, MOD_ARCHETYPE_OTHER);
@@ -696,7 +696,7 @@ function get_module_metadata($course, $modnames, $sectionreturn = null) {
                 if (isset($item->help) && isset($item->helplink)) {
                     $linktext = get_string('morehelp');
                     $item->help .= html_writer::tag('div',
-                        $OUTPUT->doc_link($item->helplink, $linktext, true), array('class' => 'helpdoclink'));
+                       $OUTPUT->doc_link($item->helplink, $linktext, true), array('class' => 'helpdoclink'));
                 }
                 $modlist[$course->id][$modname][$item->name] = $item;
             }
