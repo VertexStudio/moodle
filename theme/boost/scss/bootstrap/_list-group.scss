@@ -48,6 +48,8 @@
   margin-bottom: -$list-group-border-width;
   background-color: $list-group-bg;
   border: $list-group-border-width solid $list-group-border-color;
+  margin: 1px 0px;
+  border-radius: 25px;
 
   &:first-child {
     @include border-top-radius($list-group-border-radius);

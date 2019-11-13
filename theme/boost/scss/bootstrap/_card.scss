@@ -11,6 +11,7 @@
   background-color: $card-bg;
   background-clip: border-box;
   border: $card-border-width solid $card-border-color;
+  border-radius: 25px;
   @include border-radius($card-border-radius);
 
   > hr {
@@ -36,6 +37,7 @@
   // as much space as possible, ensuring footers are aligned to the bottom.
   flex: 1 1 auto;
   padding: $card-spacer-x;
+  
 }
 
 .card-title {
